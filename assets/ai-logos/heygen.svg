@@ -1,0 +1,13 @@
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <title>HeyGen</title>
+  <defs>
+    <linearGradient id="hg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+  <!-- HeyGen H-shaped mark: two vertical bars with horizontal connector -->
+  <rect x="2" y="2" width="6" height="20" rx="2" fill="url(#hg-grad)"/>
+  <rect x="16" y="2" width="6" height="20" rx="2" fill="url(#hg-grad)"/>
+  <rect x="2" y="9" width="20" height="6" rx="2" fill="url(#hg-grad)"/>
+</svg>

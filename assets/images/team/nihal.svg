@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_nihal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7e22ce"/>
+      <stop offset="60%" stop-color="#4c1d95"/>
+      <stop offset="100%" stop-color="#1e1035"/>
+    </linearGradient>
+    <radialGradient id="glow_nihal" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#7e22ce" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="200" rx="16" fill="url(#bg_nihal)"/>
+  <circle cx="100" cy="80" r="70" fill="url(#glow_nihal)"/>
+  
+  <g transform="translate(0, 10)">
+    <!-- Shoulders -->
+    <path d="M40 190 C40 145, 70 130, 100 130 C130 130, 160 145, 160 190 Z" fill="#241b35"/>
+    <path d="M75 130 L100 155 L125 130 Z" fill="#3b2b57"/>
+    <!-- Neck -->
+    <rect x="88" y="105" width="24" height="28" fill="#e2b18c" rx="4"/>
+    <!-- Head -->
+    <ellipse cx="100" cy="85" rx="32" ry="38" fill="#e2b18c"/>
+    <!-- Facial Features -->
+    <ellipse cx="88" cy="82" rx="3.5" ry="4" fill="#1b1222"/>
+    <ellipse cx="112" cy="82" rx="3.5" ry="4" fill="#1b1222"/>
+    <circle cx="89" cy="80.5" r="1" fill="#ffffff"/>
+    <circle cx="113" cy="80.5" r="1" fill="#ffffff"/>
+    <path d="M96 90 L100 97 L104 90" stroke="#c08c68" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M92 104 Q100 110 108 104" stroke="#873f3f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Hair / Headgear Style -->
+    <path d="M64 90 C64 50, 78 40, 100 40 C122 40, 136 50, 136 90 C136 75, 130 52, 100 52 C70 52, 64 75, 64 90 Z" fill="#1f1a24"/>
+    
+    
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <title>Opus Clip</title>
+  <defs>
+    <linearGradient id="opus-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+  <!-- Opus Clip: film frame / video clip mark with play triangle -->
+  <rect x="2" y="4" width="20" height="16" rx="3" fill="none" stroke="url(#opus-grad)" stroke-width="2"/>
+  <rect x="2" y="7" width="3" height="2.5" rx="0.5" fill="url(#opus-grad)"/>
+  <rect x="2" y="14.5" width="3" height="2.5" rx="0.5" fill="url(#opus-grad)"/>
+  <rect x="19" y="7" width="3" height="2.5" rx="0.5" fill="url(#opus-grad)"/>
+  <rect x="19" y="14.5" width="3" height="2.5" rx="0.5" fill="url(#opus-grad)"/>
+  <path d="M10 9.5 L17 12 L10 14.5Z" fill="url(#opus-grad)"/>
+</svg>
