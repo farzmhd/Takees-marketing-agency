@@ -504,16 +504,18 @@ function initScrollReveals() {
     .disciplines-header,
     .prompt-col-title,
     .ai-prompt-studio-card,
-    .contact-benefit-card
+    .contact-benefit-card,
+    .clients-title,
+    .client-logo
   `);
 
   if (!revealElements.length) return;
 
   // Compute staggered delay index per grid container
-  const gridContainers = document.querySelectorAll('.cards-grid-4, .team-grid, .stats-grid-5, .disciplines-row, .ai-catalog-grid, .blog-grid, .services-grid, .services-grid-8, .contact-benefits-grid-4, .blogs-grid-3, .bangalore-process-grid');
+  const gridContainers = document.querySelectorAll('.cards-grid-4, .team-grid, .stats-grid-5, .disciplines-row, .ai-catalog-grid, .blog-grid, .services-grid, .services-grid-8, .contact-benefits-grid-4, .blogs-grid-3, .bangalore-process-grid, .clients-logo-row');
   gridContainers.forEach(container => {
     Array.from(container.children).forEach((child, idx) => {
-      child.style.setProperty('--stagger-index', idx % 6);
+      child.style.setProperty('--stagger-index', container.classList.contains('clients-logo-row') ? idx : idx % 6);
     });
   });
 
@@ -1055,6 +1057,4 @@ function initCanvas2DAurora(card, canvas) {
   lastTime = performance.now();
   loop(lastTime);
 }
-
-
 

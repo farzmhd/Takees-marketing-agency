@@ -1,0 +1,192 @@
+/* =============================================================
+   CLIENTS – Infinite Marquee Carousel
+   ============================================================= */
+
+.clients-section {
+  padding: 64px 0 72px;
+  background: var(--bg-body);
+  overflow: hidden;
+}
+
+.clients-container {
+  text-align: center;
+}
+
+.clients-title {
+  margin: 0 0 44px;
+  color: #111;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  background: none;
+  box-shadow: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.clients-title.is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ── Marquee wrapper (full-bleed, edge fade mask) ── */
+.clients-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  /* Edge fade mask */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+}
+
+/* ── Scrolling track ── */
+.clients-marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 0;
+
+  animation: marquee-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+/* Pause on hover */
+.clients-marquee-wrapper:hover .clients-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Individual logo items ── */
+.client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 8px 36px;
+  height: 80px;
+}
+
+.client-logo img {
+  height: 52px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
+  transition: opacity 280ms ease, transform 280ms ease;
+  opacity: 0.75;
+}
+
+.client-logo:hover img {
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+/* ── Dark mode ── */
+[data-theme="dark"] .client-logo img {
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+[data-theme="dark"] .client-logo:hover img {
+  opacity: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 991px) {
+  .clients-section {
+    padding: 52px 0 60px;
+  }
+
+  .client-logo {
+    padding: 6px 28px;
+    height: 70px;
+  }
+
+  .client-logo img {
+    height: 44px;
+    max-width: 120px;
+  }
+
+  .clients-marquee-track {
+    animation-duration: 28s;
+  }
+}
+
+@media (max-width: 640px) {
+  .clients-section {
+    padding: 44px 0 52px;
+  }
+
+  .clients-title {
+    font-size: 1.25rem;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  .client-logo {
+    padding: 4px 20px;
+    height: 60px;
+  }
+
+  .client-logo img {
+    height: 36px;
+    max-width: 96px;
+  }
+
+  .clients-marquee-track {
+    animation-duration: 24s;
+  }
+
+  .clients-marquee-wrapper {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #000 5%,
+      #000 95%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #000 5%,
+      #000 95%,
+      transparent 100%
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clients-marquee-track {
+    animation: none;
+  }
+
+  .clients-title {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
